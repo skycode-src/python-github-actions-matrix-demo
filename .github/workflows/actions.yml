@@ -9,9 +9,6 @@ jobs:
   test:
     runs-on: ubuntu-latest
     strategy:
-      # By default, GitHub will maximize the number of jobs run in parallel
-      # depending on the available runners on GitHub-hosted virtual machines.
-      # max-parallel: 8
       fail-fast: false
       matrix:
         include:
@@ -84,12 +81,32 @@ jobs:
             python-version: "3.9"
           - django-version: "4.0.0"
             python-version: "3.10"
+          # Django 4.2
+          - django-version: "4.2.0"
+            python-version: "3.8"
+          - django-version: "4.2.0"
+            python-version: "3.9"
+          - django-version: "4.2.0"
+            python-version: "3.10"
+          - django-version: "4.2.0"
+            python-version: "3.11"
+          - django-version: "4.2.0"
+            python-version: "3.12"
+          # Django 5.0
+          - django-version: "5.0.0"
+            python-version: "3.9"
+          - django-version: "5.0.0"
+            python-version: "3.10"
+          - django-version: "5.0.0"
+            python-version: "3.11"
+          - django-version: "5.0.0"
+            python-version: "3.12"
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
 
