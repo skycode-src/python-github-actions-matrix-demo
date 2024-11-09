@@ -14,7 +14,7 @@
 This repository is an example of how to use [GitHub Actions Matrix feature](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/workflow-syntax-for-github-actions#jobsjob_idstrategymatrix).
 
 Our demo uses the `matrix` feature to install:
-- Python versions: 2.7, 3.6, 3.7, 3.8, 3.9, 3.10, 3.11 and 3.12
+- Python versions: 3.7, 3.8, 3.9, 3.10, 3.11 and 3.12
 - Django versions: 1.11 (LTS), 2.0, 2.1, 2.2 (LTS), 3.0, 3.1, 3.2 (LTS), 4.0, 4.2(LTS) and 5.0
 
 See the [actions.yml workflow](https://github.com/jefftriplett/python-github-actions-matrix-demo/blob/main/.github/workflows/actions.yml) for the matrix example.
